@@ -14,6 +14,7 @@ const ModularizeMe = () => {
       </header>
       <section>
         <ul className="blogs">
+          {/** Blog Post 1 */}
           <li>
             <article>
               <div className="blog-header">
@@ -45,6 +46,7 @@ const ModularizeMe = () => {
               </footer>
             </article>
           </li>
+           {/** Blog Post 2 */}
           <li>
             <article>
               <div className="blog-header">
@@ -79,6 +81,7 @@ const ModularizeMe = () => {
               </footer>
             </article>
           </li>
+           {/** Blog Post 3 */}
           <li>
             <article>
             <div className="blog-header">
@@ -111,6 +114,7 @@ const ModularizeMe = () => {
               </footer>
             </article>
           </li>
+          {/** Blog Post 4 */}
           <li>
             <article>
               <div className="blog-header">
