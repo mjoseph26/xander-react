@@ -3,6 +3,9 @@ import { data } from "./data";
 
 const CardContainer = () => {
   /**
+   * Load this into the App component, in App.js
+   *
+   *
    *  1. Use Array.map() to iterate over the data being imported from "../data"
    *  2. Deconstruct the properties from the object
    *  3. Return a <SimpleCard /> component, passing in the relevant props.
@@ -11,10 +14,10 @@ const CardContainer = () => {
    */
 
   return (
-    <div className='container'>
+    <div className="container">
       <h1>Iteration Exercise</h1>
       <div className="card-container">
-        <SimpleCard />        
+        <SimpleCard />
       </div>
     </div>
   );
@@ -22,6 +25,9 @@ const CardContainer = () => {
 
 const SimpleCard = () => {
   /**
+   *
+   *
+   *
    * 1. Refactor the JSX code so the Image, Title, and Description
    *    are returned from their own <Image />, <Title /> and <Description /> components.
    *
