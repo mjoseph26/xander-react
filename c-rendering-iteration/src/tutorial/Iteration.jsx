@@ -29,8 +29,7 @@ const data = [
 
 const Iteration = () => {
   return (
-    <div className="container">
-      <h2>Iteration</h2>
+    <div className="container centered">
       <div className="card-container">
         {data.map((item) => {
           return (

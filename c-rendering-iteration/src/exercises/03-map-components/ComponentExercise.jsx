@@ -17,13 +17,18 @@ const CardContainer = () => {
     <div className="container">
       <h1>Iteration Exercise</h1>
       <div className="card-container">
-        <SimpleCard />
+        {data.map((person) => {
+          const { id, img, login, avatar_url, post } = person;
+          return (
+            <SimpleCard key={id} img={avatar_url} login={login} post={post} />
+          );
+        })}
       </div>
     </div>
   );
 };
 
-const SimpleCard = () => {
+const SimpleCard = (props) => {
   /**
    *
    *
@@ -44,25 +49,37 @@ const SimpleCard = () => {
   return (
     <>
       <article className="card-wrapper">
-        <div className="card-image">
-          <img
-            src="https://avatars.githubusercontent.com/u/1?v=4"
-            alt="mojombo"
-          />
-        </div>
+        <Image img={props.img} />
         <div className="card-content">
-          <div className="card-content--header">
-            <h2>Some Title to be replaced with props</h2>
-          </div>
-          <div className="card-content--body">
-            <p>Some content to be replaced with props</p>
-          </div>
+          <Title login={props.login} />
+          <Description post={props.post} />
         </div>
       </article>
-      {/** Image Component */}
-      {/** Title Component */}
-      {/** Description Component */}
     </>
+  );
+};
+
+const Image = (props) => {
+  return (
+    <div className="card-image">
+      <img src={props.img} alt={props.login} />
+    </div>
+  );
+};
+
+const Title = (props) => {
+  return (
+    <div className="card-content--header">
+      <h2>{props.login}</h2>
+    </div>
+  );
+};
+
+const Description = (props) => {
+  return (
+    <div className="card-content--body">
+      <p>{props.post}</p>
+    </div>
   );
 };
 

@@ -5,6 +5,7 @@ import Child2 from "./Child2";
 import Child3 from "./Child3";
 
 const ChangeChildren = () => {
+  const [value, setValue] = useState(1);
   /**
    *
    * The most common scenario to use conditional rendering
@@ -21,17 +22,24 @@ const ChangeChildren = () => {
    *       Have a read through the 'Events' section of the LMS
    *       if you need some pointers with adding click events to buttons.
    *
-   *
    */
 
   return (
     <>
       <div className="btn-container">
-        <button className="btn">Render Child 1</button>
-        <button className="btn">Render Child 2</button>
-        <button className="btn">Render Child 3</button>
+        <button className="btn" onClick={() => setValue(1)}>
+          Render Child 1
+        </button>
+        <button className="btn" onClick={() => setValue(2)}>
+          Render Child 2
+        </button>
+        <button className="btn" onClick={() => setValue(3)}>
+          Render Child 3
+        </button>
       </div>
-      <div className="child-container"></div>
+      <div className="child-container">
+        {value === 3 ? <Child3 /> : value === 2 ? <Child2 /> : <Child1 />}
+      </div>
     </>
   );
 };

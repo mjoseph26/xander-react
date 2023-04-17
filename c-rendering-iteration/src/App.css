@@ -128,6 +128,11 @@ h2 {
   margin: 3rem auto;
   height: 100%;
 }
+
+.card-content--header h2 {
+  color: black;
+}
+
 .card-wrapper {
   width: 100%;
   align-items: center;
@@ -189,6 +194,10 @@ h2 {
   min-height: 50vh;
   display: grid;
   place-items: center;
+}
+
+.child-container h2 {
+  color: black;
 }
 
 /* Conditional ClassNames */

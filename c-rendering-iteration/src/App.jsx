@@ -3,6 +3,7 @@ import ConditionalClassNames from "./tutorial/ConditionalClassNames";
 import ShortCircuitEvaluation from "./tutorial/ShortCircuitEvaluation";
 import Iteration from "./tutorial/Iteration";
 import ChangeChildren from "./exercises/01-change-children/ChangeChildren";
+import ChangeChildrenAlternative from "./exercises/01-change-children/alternative-solution/ChangeChildrenAlternative";
 import AlternatingBackground from "./exercises/02-alternating-background/AlternatingBackground";
 import CardContainer from "./exercises/03-map-components/ComponentExercise";
 
@@ -17,7 +18,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <ConditionalRendering />
+      <ChangeChildrenAlternative />
     </div>
   );
 }

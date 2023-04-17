@@ -40,11 +40,19 @@ const AlternatingBackground = () => {
 
   const value = 1;
   return (
-    <div className="big-background">
+    <div
+      className={`big-background ${
+        value === 2 ? "alternative-bg-2" : value === 3 ? "alternative-bg-3" : ""
+      }`}
+    >
       <h1>Alternate my background!</h1>
-      <h2>The value is 1</h2>
-      {/** <h2>The value is 2</h2> */}
-      {/** <h2>The value is 3</h2> */}
+      {value === 2 ? (
+        <h2>The value is 2</h2>
+      ) : value === 3 ? (
+        <h2>The value is 3</h2>
+      ) : (
+        <h2>The value is 1</h2>
+      )}
     </div>
   );
 };
