@@ -191,6 +191,45 @@ h2 {
   place-items: center;
 }
 
+/* Conditional ClassNames */
+
+.container.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  background-color: white;
+  color: black;
+  width: 300px;
+  margin-top: 200px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.box h2 {
+  color: black;
+}
+
+.box .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.box--content {
+  display: none;
+  padding: .25rem;
+  color: grey;
+  line-height: 1.5;
+}
+
+.box--content.show {
+  display: block;
+}
+
 /* Form */
 
 .form {
